@@ -1,0 +1,49 @@
+
+ {% load staticfiles %}
+<html>
+
+        <head>
+            <title>IDZ</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="/static/css/libr.css">
+            <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        </head>
+        <body>
+             <div class="content">
+            <div class="page-header">
+              
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+					  <h1> <a href="/">Library </h1>
+                    </div>
+
+  
+                </div>
+            </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+
+				{% for post in posts %}
+					<div>
+						<h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.id}})   {{ post.author }}  "{{ post.title }}"</a></h4>
+					</div>
+				{% endfor %}
+
+              </div>
+            </div>
+            </div>
+        <footer>
+            <div class="container">
+                <p>&#169; 588th</p>
+            </div>
+        </footer>
+        </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </html>
+

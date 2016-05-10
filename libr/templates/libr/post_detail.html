@@ -1,0 +1,51 @@
+
+ {% load staticfiles %}
+<html>
+
+        <head>
+            <title>IDZ</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="/static/css/libr.css">
+            <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        </head>
+        <body>
+             <div class="content">
+            <div class="page-header">
+              
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+					   <h1> <a href="/">Library</a> </h1>
+                    </div>
+
+  
+                </div>
+            </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+
+			{% block content %}
+				<div class="post">
+					<h1>{{ post.title }}</h1>
+					<p>{{ post.author|linebreaks }}</p>
+					<h3>{{ post.text }}</h3>
+				</div>
+			{% endblock %}
+
+              </div>
+            </div>
+            </div>
+        <footer>
+            <div class="container">
+                <p>&#169; 588th</p>
+            </div>
+        </footer>
+        </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    </html>
+
